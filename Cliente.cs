@@ -176,14 +176,17 @@ namespace Bank
                 }
                 else
                 {
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Cliente nao cadastrado");
+                    Console.ForegroundColor = ConsoleColor.White;
                 }
 
             }
             catch (Exception)
             {
-
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Valor informado incorreto");
+                Console.ForegroundColor = ConsoleColor.White;
             }
         }
     }
