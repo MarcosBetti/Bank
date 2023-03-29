@@ -4,11 +4,12 @@ using System.Collections.Generic;
 
 List<Cliente> clienteList = new List<Cliente>();
 CadastroCliente usuario = new CadastroCliente();
-int opcaoConsulta = usuario.CadastrosClientes();
+int? opcaoConsulta = usuario.CadastrosClientes();
 
 do
 {
-    if (opcaoConsulta <=5 && opcaoConsulta >=0) {
+    if (opcaoConsulta != null && opcaoConsulta <=5 && opcaoConsulta >=0) 
+    {
         if (opcaoConsulta == 1)
         {
             Cliente.CadastroConta(clienteList);
@@ -41,7 +42,10 @@ do
     }
     else
     {
+        Console.Clear();
+        Console.ForegroundColor = ConsoleColor.Red;
         Console.WriteLine("Digite apenas as opções disponíveis");
+        Console.ForegroundColor = ConsoleColor.White;
         opcaoConsulta = usuario.CadastrosClientes();
     }
 } while (opcaoConsulta != 0);

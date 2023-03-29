@@ -9,7 +9,7 @@ namespace Bank
     public class CadastroCliente
     {
 
-        public int CadastrosClientes()
+        public int? CadastrosClientes()
         {
 
             Console.WriteLine("Menu");
@@ -26,9 +26,14 @@ namespace Bank
 
             Console.WriteLine("0-Sair");
 
-            int usuario = int.Parse(Console.ReadLine());
-            return usuario;
+            string usuario = Console.ReadLine();
+            if (int.TryParse(usuario, out int value))
+                return value;
+            else
+            {                                 
+                return null;
 
+            }
         }
     }
 }
