@@ -8,7 +8,7 @@ int? opcaoConsulta = usuario.CadastrosClientes();
 
 do
 {
-    if (opcaoConsulta != null && opcaoConsulta <=5 && opcaoConsulta >=0) 
+    if (opcaoConsulta != null && opcaoConsulta <=5 && opcaoConsulta >= 0) 
     {
         if (opcaoConsulta == 1)
         {
